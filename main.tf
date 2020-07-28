@@ -36,6 +36,8 @@ resource "google_compute_target_pool" "default" {
   session_affinity = var.session_affinity
 
   health_checks = var.disable_health_check ? [] : [google_compute_http_health_check.default.0.self_link]
+  
+  instances = var.instances
 }
 
 resource "google_compute_http_health_check" "default" {
