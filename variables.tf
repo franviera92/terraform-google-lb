@@ -109,3 +109,10 @@ variable "allowed_ips" {
   type        = list(string)
 
 }
+
+variable "instances" {
+  description = "The IP address ranges which can access the load balancer."
+  default     = []
+  type        = list(string)
+
+}
